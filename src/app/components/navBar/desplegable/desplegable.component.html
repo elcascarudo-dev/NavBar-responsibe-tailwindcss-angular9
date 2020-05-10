@@ -1,0 +1,32 @@
+<!-- Menú para navegador -->
+<div class="relative hidden sm:block">
+    <div>
+        <button (click)="isOpen = !isOpen" class="relative z-10 block h-8 w-8 rounded-full overflow-hidden border-2 border-gray-600 focus:outline-none focus:border-white" >
+            <img class="h-full w-full object-cover " src="assets/img/avatar.jpg" alt="Mi avatar">
+        </button>
+    </div>
+
+    <button *ngIf="isOpen" (click)="isOpen = false" tabindex="-1" class="fixed inset-0 h-full w-full bg-gray-900 opacity-50 cursor-default"></button>
+
+    <div *ngIf="isOpen" class="absolute right-0 mt-2 py-1 w-48 bg-white rounded-lg shadow-xl ">
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-indigo-500 hover:text-white my-1" >Sobre mi</a>
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-indigo-500 hover:text-white my-1" >Configuracón</a>
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-indigo-500 hover:text-white my-1" >Salir</a>
+    </div>
+</div>
+
+<!-- Menú para celulares -->
+<div class="sm:hidden">
+    <div class=" border-t border-gray-600">
+        <div class="mt-3 flex items-center focus:outline-none focus:border-white" >
+            <img class="h-8 w-8 rounded-full overflow-hidden border-2" src="assets/img/avatar.jpg" alt="Mi avatar">
+            <span class="text-white ml-3">El Cascarudo</span>
+        </div>
+    </div>
+
+    <div class=" mt-2 py-1">
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-indigo-500 hover:text-white my-1" >Sobre mi</a>
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-indigo-500 hover:text-white my-1" >Configuracón</a>
+        <a href="#" class="block py-2 px-4 text-gray-700 hover:bg-indigo-500 hover:text-white my-1" >Salir</a>
+    </div>
+</div>
