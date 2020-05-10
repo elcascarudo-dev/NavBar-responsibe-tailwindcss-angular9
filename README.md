@@ -1,27 +1,55 @@
 # TailwindCssMenu
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+Este proyecto esta construido con los siguientes FrameWorks:
 
-## Development server
+ * Angular 9
+ * TailwindCss
+ * Font-Awesome
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Descripción
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Menú responsivo en Angular y CSS. Este ejmple fue tomado del sitio de TailWindCss, se tradue el ejemplo de Vue.JS a Angular9
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Algunos comandos
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Compilación TailWindcss
 
-## Running end-to-end tests
+```
+npx tailwindcss build tailwind.css -o src/assets/output.css
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Compilación de mis CSS en Tail Wind Css
 
-## Further help
+En el 'tailwind.css' agragr los nombres de las clases que deseamos crar
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+@tailwind base;
+@tailwind components;
+
+.btn-resp-menu{
+    @apply mb-1 block px-2 py-1 text-white font-semibold rounded;
+}
+
+
+.btn-resp-menu:fover {
+    @apply bg-gray-800
+}
+
+
+@screen sm {
+    .btn-resp-menu {
+        @apply mb-0 ml-2
+    }
+}
+
+@tailwind utilities;
+```
+
+y ejecutar 
+
+```
+npx tailwindcss build tailwind.css -o src/assets/output.css --watch
+```

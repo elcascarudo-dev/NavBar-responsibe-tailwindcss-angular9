@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+
+.btn-resp-menu{
+    @apply mb-1 block px-2 py-1 text-white font-semibold rounded;
+}
+
+
+.btn-resp-menu:hover {
+    @apply bg-gray-800
+}
+
+
+@screen sm {
+    .btn-resp-menu {
+        @apply mb-0 ml-2
+    }
+}
+
+@tailwind utilities;
